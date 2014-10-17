@@ -1,6 +1,6 @@
 namespace :seed do
   task :all do
-    Mongoid.purge!
+    #Mongoid.purge!
 
     puts 'Seeding players'
     seeder = Seeder.new(source: 'data/Master-small.csv', type: Player)
