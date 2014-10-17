@@ -26,5 +26,5 @@ Some things that are still missing:
 * Model level data validation
 * Separate model logic into concerns
 * Implement a team model for better data encapsulation
-* Improve data import via bulk inserts (it is slow now due to reliance of callbacks to compute some fields)
+* Improve data import via bulk inserts (it is slow now due to reliance on callbacks to compute some fields)
 * Test rake tasks to make sure that the appropriate methods are called
