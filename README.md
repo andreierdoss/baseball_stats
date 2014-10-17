@@ -1,29 +1,30 @@
-# BaseballStats
+# Baseball Stats
 
-TODO: Write a gem description
+## Requirements
+
+This app uses Ruby and MongoDB
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone repo and then run the following to seed with data:
 
-    gem 'baseball_stats'
+    rake seed:all
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install baseball_stats
+Please note this is will take aprox 3 to 4 minutes.
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the following to see stats for the first two exercises:
 
-## Contributing
+    rake stats:all
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## Notes
+
+Due to time constraint, I was only able to implement the first two exercises. I believe the current implementation is enough to show my thought process and the way I used software design principles to organize the code and resolve the requirements.
+
+Some things that are still missing:
+* Model level data validation
+* Separate model logic into concerns
+* Implement a team model for better data encapsulation
+* Improve data import via bulk inserts (it is slow now due to reliance of callbacks to compute some fields)
+* Test rake tasks to make sure that the appropriate methods are called
