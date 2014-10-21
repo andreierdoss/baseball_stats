@@ -14,6 +14,9 @@ class Batting
   field :rbi, type: Integer
   field :avg, type: Float
   field :slugging_percentage, type: Float
+  index({avg: 1})
+  index({home_runs: 1})
+  index({rbi: 1})
   belongs_to :player
   before_create :calculate_average
   before_create :calculate_slugging_percentage

@@ -11,4 +11,13 @@ class BattingAverageStatViewer
       "No eligible players found."
     end
   end
+
+  def display_triple_crown_winner league, year
+    triple_crown = @stat.triple_crown(league, year)
+    if triple_crown
+      "The #{year} #{league} triple crown winner is #{triple_crown.name}."
+    else
+      "No winner for #{year} #{league}."
+    end
+  end
 end

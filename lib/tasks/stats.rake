@@ -11,5 +11,14 @@ namespace :stats do
     puts "\n\n"
   end
 
-  task all: [:most_improved_batting_average, :slugging_percentage]
+  task :triple_crown do
+    viewer = BattingAverageStatViewer.new(BattingAverageStat.new)
+    puts "Triple Crown Winner(s)"
+    puts viewer.display_triple_crown_winner('AL', 2011)
+    puts viewer.display_triple_crown_winner('NL', 2011)
+    puts viewer.display_triple_crown_winner('AL', 2012)
+    puts viewer.display_triple_crown_winner('NL', 2012)
+  end
+
+  task all: [:most_improved_batting_average, :slugging_percentage, :triple_crown]
 end
